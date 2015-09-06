@@ -1,0 +1,208 @@
+Aug 16, 2015 8:28:09 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerFailed
+WARNING: 
+
+	 Test Case ID: 	 	1	 - FAILED
+
+
+Aug 16, 2015 8:28:09 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	2	 - Passed
+
+
+Aug 16, 2015 8:28:10 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	3	 - Passed
+
+
+Aug 16, 2015 8:28:11 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	4	 - Passed
+
+
+Aug 16, 2015 8:28:11 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	5	 - Passed
+
+
+Aug 16, 2015 8:28:11 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	6	 - Passed
+
+
+Aug 16, 2015 8:28:11 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	7	 - Passed
+
+
+Aug 16, 2015 8:28:13 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	8	 - Passed
+
+
+Aug 16, 2015 8:28:13 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	9	 - Passed
+
+
+Aug 16, 2015 8:28:14 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerFailed
+WARNING: 
+
+	 Test Case ID: 	 	10	 - FAILED
+
+
+Aug 16, 2015 8:28:14 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	11	 - Passed
+
+
+Aug 16, 2015 8:28:14 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	12	 - Passed
+
+
+Aug 16, 2015 8:28:14 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	13	 - Passed
+
+
+Aug 16, 2015 8:28:14 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	14	 - Passed
+
+
+Aug 16, 2015 8:28:14 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	15	 - Passed
+
+
+Aug 16, 2015 8:28:15 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerFailed
+WARNING: 
+
+	 Test Case ID: 	 	16	 - FAILED
+
+
+Aug 16, 2015 8:28:15 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	17	 - Passed
+
+
+Aug 16, 2015 8:28:15 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	18	 - Passed
+
+
+Aug 16, 2015 8:28:15 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	19	 - Passed
+
+
+Aug 16, 2015 8:28:15 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	20	 - Passed
+
+
+Aug 16, 2015 8:28:16 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	21	 - Passed
+
+
+Aug 16, 2015 8:28:16 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	22	 - Passed
+
+
+Aug 16, 2015 8:28:16 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	23	 - Passed
+
+
+Aug 16, 2015 8:28:16 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	24	 - Passed
+
+
+Aug 16, 2015 8:28:16 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	25	 - Passed
+
+
+Aug 16, 2015 8:28:16 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerFailed
+WARNING: 
+
+	 Test Case ID: 	 	26	 - FAILED
+
+
+Aug 16, 2015 8:28:17 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	27	 - Passed
+
+
+Aug 16, 2015 8:28:17 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	28	 - Passed
+
+
+Aug 16, 2015 8:28:17 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	29	 - Passed
+
+
+Aug 16, 2015 8:28:17 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	30	 - Passed
+
+
+Aug 16, 2015 8:28:17 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyLoggerFailed
+WARNING: 
+
+	 Test Case ID: 	 	31	 - FAILED
+
+
+Aug 16, 2015 8:28:24 PM signUpValidatorMaserati.RemedySignUpCommonMethodsAndVarriables remedyExitSequance
+CONFIG: 
+
+
+
+	 User:		 Roma Remedy
+	 Myemail:	 RemedyRoma@gmail.com
+	 Cellphone:	 650 731 2873
+
+
+	 Script executed successfully!!
+	 Test Script Duration:		 34921
+	 Failed Test Cases:		 5
+	 Test Date:		 08/16/2015 20:28:17
+	 Output file:		 REMEDYLOGGER.txt
+
+
+	 Os:			 Windows 7
+	 Jave Version:		 JaveSE-1.8
+	 Script name:		 RemedySignUpViper
+	 Regression Testing for  www.RomaRemedySolutions.com
+	 (: Thank you for trying Roma RemedySignUpViper - Have a nice day RR :)
