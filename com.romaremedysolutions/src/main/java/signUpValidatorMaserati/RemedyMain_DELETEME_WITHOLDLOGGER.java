@@ -29,7 +29,7 @@ import remedyEmailSender.RemedySimpleGmailEmailMessageSender;
 
 
 // The main Executioner of the RemedySignUpValidator Viper - this is the ignition and steering wheel of the program
-public class RemedyMain 
+public class RemedyMain_DELETEME_WITHOLDLOGGER 
   extends RemedySignUpCommonMethodsAndVarriables
 //  implements RemedyRegexInterfacer
 {
@@ -50,6 +50,7 @@ public class RemedyMain
 
 
 public static void main(final String[] signUpValidator)
+    throws SecurityException, IOException // RemedyLogger Exceptions for Opening file or Permissions RR
   {
 		
 	  
@@ -99,13 +100,15 @@ public static void main(final String[] signUpValidator)
      * @author Roma Remedy
      * Executes the remedyStartSequences methods that loads all necessary 
      */
-    try {
-		remedyStartSequence(propRemedy);
-	} catch (IOException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
-	}
+    remedyStartSequence(propRemedy);
     
+
+//    //below we are trying to load excel with the newly created ExcelRemedyObject SEP05 RR
+//       ExcelRemedyObject actualExcelRemedyObject = new ExcelRemedyObject();
+//       Workbook remedyMetadataExcelWorkBook = actualExcelRemedyObject.metaDataWorkbookRemedy;
+//       Sheet remedyMetadataExcelReaderSheet = actualExcelRemedyObject.metaDataSheetRemedy;
+
+
  
     
  //below we are trying to load excel with the newly created ExcelRemedyObject SEP07 RR
@@ -149,23 +152,26 @@ public static void main(final String[] signUpValidator)
 	    	    		.getStringCellValue().toString().equals(remedyMainTestCasesHashMap.get("hashKeyTestCaseActual").toString()))
 	    	    {
 	    	    	remedyExcelResultsRow.createCell(1-1).setCellValue("Passed");
-	    	    	actualFantasticTrippleRemedyLogger.remedyLoggerPassed(remedyTestCaseIterator);
+//	    	    	remedyLoggerPassed(remedyTestCaseIterator);
+	    	    	actualFantasticTrippleRemedyLogger.remedyLoggerPassed(remedyTestCaseIterator); //FANTASTICREMEDY LOGGER TEST (1 - 3)
 	    	    	
 	    	    	
 	    	    }
 	    	    else
 	    	    {
 	    	    	remedyExcelResultsRow.createCell(1-1).setCellValue("Failed");
+//	    	    	remedyLoggerFailed(remedyTestCaseIterator);
 	    	    	exitStatusFailedTestsCounter += 1;
-	    	    	actualFantasticTrippleRemedyLogger.remedyLoggerFailed(remedyTestCaseIterator);
+	    	    	actualFantasticTrippleRemedyLogger.remedyLoggerFailed(remedyTestCaseIterator);//FANTASTICREMEDY LOGGER TEST (2 - 3)
 	    	    }
 	    	    
 	    	    remedyExcelResultsRow.createCell(7-1).setCellValue(remedyMainTestCasesHashMap.get("hashKeyTestCaseActual").toString());
             }
 	    	catch (Exception e)
 	        {
+//	    		remedyExceptionHandler(remedyTestCaseIterator, e);
 	    		exitStatusFailedTestsCounter += 1;
-	    		actualFantasticTrippleRemedyLogger.remedyExceptionHandler(remedyTestCaseIterator, e);
+	    		actualFantasticTrippleRemedyLogger.remedyExceptionHandler(remedyTestCaseIterator, e); //FANTASTICTREMEDERY LOGGER TEST (3-3
 	    		
 	        }
 	    }
@@ -197,6 +203,13 @@ public static void main(final String[] signUpValidator)
     
     
     
+    
+   
+ 
+    
+   
+    
+    
     // I should use the strategy of using headlessbrowser for static elements (is displayed)
     // and use a regular driver for dynamic items or 
     // Research "Ternary Operators" to include in my code - in Ruby its "?:" (pg 29)
@@ -213,12 +226,7 @@ public static void main(final String[] signUpValidator)
      * @author Roma Remedy
      * 
      */
-    try {
-		remedyExitSequance(signUpValidator.length, testCasesReportEmailPassword);
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+    remedyExitSequance(signUpValidator.length, testCasesReportEmailPassword);
     
     
     int lengthOfSignUpValidator = signUpValidator.length;

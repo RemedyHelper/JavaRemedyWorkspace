@@ -44,8 +44,7 @@ public class RemedySignUpCommonMethodsAndVarriables
   protected static WebDriver driverSecondaryBrowser = new FirefoxDriver();
   
   
-  protected static final Logger REMEDYLOGGER = Logger.getLogger(RemedySignUpCommonMethodsAndVarriables.class.getName());
-  protected static FileHandler remedyLoggerTextFileAttributes;
+  
   protected static int exitStatusFailedTestsCounter;
   protected static long remedyTestDurationTimer = System.currentTimeMillis();
   
@@ -137,14 +136,6 @@ public class RemedySignUpCommonMethodsAndVarriables
     PageFactory.initElements(driver, RemedyMain.class); // PAGEFACTORY RR	
     
     
-    // Configures Logger to be saved locally via text file RemedyLogger.txt 				(1 - 4) RR
-    REMEDYLOGGER.setLevel(Level.ALL);
-    // RemedyLogger output text file will be formated for readability 						(2 - 4) RR
-    remedyLoggerTextFileAttributes = new FileHandler("RemedyTestResults/REMEDYLOGGER.txt");
-    // Predetermines how the data will be formated in the Logger for ease of reading 		(3 - 4) RR
-    remedyLoggerTextFileAttributes.setFormatter(new SimpleFormatter());
-    // Configures the handling of the RemedyLogger text file combining name and attributes	(4 - 4) RR
-    REMEDYLOGGER.addHandler(remedyLoggerTextFileAttributes);
     
     
     driver.manage().window().setPosition(new Point(0, 0));
@@ -172,37 +163,7 @@ public class RemedySignUpCommonMethodsAndVarriables
     
     
   }
-  
-  
-  protected static int remedyExceptionHandler(int remedyTestCaseIterator, Exception remedyActual)
-  {
-    REMEDYLOGGER.warning(
-      "\r\n\t Test Case Number: \t\t" + remedyTestCaseIterator + "\t" + 
-      "- Caused an EXCEPTIION - Check Element precense and validity \r\n" + "\r\n\t");
-    Toolkit.getDefaultToolkit().beep();
-    return ++exitStatusFailedTestsCounter;
-  }
-  
-  
-  
-  
-  
-  	
-  
-	protected static void remedyLoggerPassed(int remedyTestCaseIterator)
-	{
-	REMEDYLOGGER.config("\r\n\r\n\t Test Case ID: \t \t" + remedyTestCaseIterator + "\t - Passed" + "\r\n\r\n");
-	      }
-
-
-  	protected static int remedyLoggerFailed(int remedyTestCaseIterator)
-  	{
-	REMEDYLOGGER.warning("\r\n\r\n\t Test Case ID: \t \t" + remedyTestCaseIterator + "\t - FAILED" + "\r\n\r\n");
-	      Toolkit.getDefaultToolkit().beep();
-	      exitStatusFailedTestsCounter += 1;
-	      return exitStatusFailedTestsCounter;
-	      }
-  
+    
   
   
   
@@ -246,9 +207,10 @@ public class RemedySignUpCommonMethodsAndVarriables
 	  
 	  driver.quit();
 
-
-	  REMEDYLOGGER.config(scriptExecutionSummary);
-    
+	  FantasticTrippleRemedyLogger actualFantasticTrippleRemeyLogger = new FantasticTrippleRemedyLogger(); // fantastic logger sep07RR
+	  actualFantasticTrippleRemeyLogger.remedyLoggerExitSeuance(scriptExecutionSummary);					// fantastic logger sep07 RR
+	  
+	  
     
     
     
@@ -259,11 +221,10 @@ public class RemedySignUpCommonMethodsAndVarriables
     ProcessBuilder pb = new ProcessBuilder("Notepad.exe", new File("RemedyTestResults/REMEDYLOGGER.txt").getPath());
     pb.start();
     
-    if (SignUpValidator == 0) {
-      System.exit(exitStatusFailedTestsCounter);
-    } else {
-      REMEDYLOGGER.warning("Yes Arguments!");
-    }
+    
+    
+    
+    
   }
   
   

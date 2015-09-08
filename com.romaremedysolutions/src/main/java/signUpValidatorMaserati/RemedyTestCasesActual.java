@@ -190,7 +190,7 @@ public class RemedyTestCasesActual extends RemedySignUpCommonMethodsAndVarriable
 			    	}
 				    
 				} catch (Exception e) {
-					REMEDYLOGGER.warning("An Exception below occured RR \t\t\r\n" + e);
+					System.out.println("An Exception below occured RR \t\t\r\n" + e);
 				}
 		    
 		    
