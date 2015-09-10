@@ -14,8 +14,8 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelRemedyObject {
 
 
-	protected Workbook metaDataWorkbookRemedy;
-	protected Sheet metaDataSheetRemedy;
+	public Workbook metaDataWorkbookRemedy;
+	public Sheet metaDataSheetRemedy;
 	
 	
 	public ExcelRemedyObject (String metaDataWorkBookPath, int testing_DataSheetPositionInWorkbook) {

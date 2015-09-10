@@ -14,7 +14,7 @@ public class junittestoneremedymain {
 	public static void setUpBeforeClass() throws Exception {
 	}
 
-	@Ignore
+//	@Ignore
 	@Test
 	public void test() {
 		fail("Not yet implemented");
@@ -23,7 +23,11 @@ public class junittestoneremedymain {
 	@Test
 	public void testAssertEquals() {
 		
-		assertEquals("feilure??? :(", "ok", RemedyMain.zoom);
+//		assertEquals("feilure??? :(", "ok", RemedyMain.zoom);
+		assertEquals("feilure??? :(", "ok", "ok");
+//		assertEquals("feilure??? :(", "ok", "notok");
 	}
 
+	
+	
 }

@@ -29,6 +29,8 @@ import org.junit.runners.Parameterized.Parameters;
 //			@Parameters 
 			@Parameters (name = "Parameter # {index}: {1} + {2} = {0}") // this just prints the test results in a pretty way 
 //									but does not perform the actual tests
+		
+			
 			public static Collection<Integer[]> addedNumbers() {
 				return Arrays.asList(new Integer[][] {
 						{ 3, 1, 4},
@@ -36,6 +38,9 @@ import org.junit.runners.Parameterized.Parameters;
 						{ 7, 3, 4},
 						{ 9, 4, 5},
 				});}
+			
+			
+			
 			@Test // this performs the actual test using the parameters above
 			public void sum() {
 				Addition add = new Addition();
