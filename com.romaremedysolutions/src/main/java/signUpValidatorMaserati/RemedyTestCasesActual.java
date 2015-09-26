@@ -14,17 +14,24 @@ import java.util.Properties;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class RemedyTestCasesActual extends RemedySignUpCommonMethodsAndVarriables
+public class RemedyTestCasesActual //extends RemedySignUpCommonMethodsAndVarriables
 {
 	
 	
 	
 // This is a Chain of responsibility pattern
-	  public static Hashtable<String, String> remedyTestCases (int remedyTestCaseIterator) {
+	  public static Hashtable<String, String> remedyTestCases (int remedyTestCaseIterator, WebDriver driver) {
+		  
+		  
+
+//		  BettaValidatorHomePage actualbeBettaVzalidatorHomePage = PageFactory.initElements(driver, BettaValidatorHomePage.class);
+		  PageObjectModel_HomePageFactoryElementsSep18 atualGammaValidatorHomePage = PageFactory.initElements(driver, PageObjectModel_HomePageFactoryElementsSep18.class);
 		  
 		  final Properties propRemedy = new Properties();
 		    try
@@ -39,6 +46,7 @@ public class RemedyTestCasesActual extends RemedySignUpCommonMethodsAndVarriable
 		    Hashtable<String, String> remedyHashTableTestCasesActual = new Hashtable<String, String>();
 		    try
 		    {
+		    	
 		    	switch (remedyTestCaseIterator)
 		    	{
 		    	
@@ -51,112 +59,116 @@ public class RemedyTestCasesActual extends RemedySignUpCommonMethodsAndVarriable
 		    	case 2:
 //		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", homeidftitlePageFactory.getText());
 		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual",
-		    				foo(remedyTestCaseIterator, homeidftitlePageFactory, RemedySignUpCommonMethodsAndVarriables.driver) 
+		    				RemedySignUpCommonMethodsAndVarriables.foo(remedyTestCaseIterator, atualGammaValidatorHomePage.homeidftitlePageFactory, RemedySignUpCommonMethodsAndVarriables.driver) 
 		    				.getText());
 		    		break;
 		    	
 		    		
 		    	case 3:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidquotesPageFactory.isDisplayed()));
-		    		remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, homeidquotesPageFactory, driver);
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidquotesPageFactory.isDisplayed()));
+		    		RemedySignUpCommonMethodsAndVarriables.remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, atualGammaValidatorHomePage.homeidquotesPageFactory, driver);
+		    		
+		    		System.out.println(driver.findElement(By.id("id_quotes")).getText());
+		    		
+		    		
 		    		break;
 			    	
 		    		
 		    	case 4:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidfnamePageFactory.isDisplayed() && 
-		    				homeidlnamePageFactory.isDisplayed() && 
-		    				homeidemailPageFactory.isDisplayed() && 
-		    				homeidphonePageFactory.isDisplayed()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidfnamePageFactory.isDisplayed() && 
+		    				atualGammaValidatorHomePage.homeidlnamePageFactory.isDisplayed() && 
+		    				atualGammaValidatorHomePage.homeidemailPageFactory.isDisplayed() && 
+		    				atualGammaValidatorHomePage.homeidphonePageFactory.isDisplayed()));
 		    		break;
 		    		
 		    		
 		    	case 5:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidgradio01PageFactory.isDisplayed() && 
-		    				homeidgradio02PageFactory.isDisplayed()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidgradio01PageFactory.isDisplayed() && 
+		    				atualGammaValidatorHomePage.homeidgradio02PageFactory.isDisplayed()));
 		    		break;
 			    	
 		    		
 		    	case 6:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidstatePageFactory.isDisplayed()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidstatePageFactory.isDisplayed()));
 		    		break;
 			    	
 		    		
 		    	case 7:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidcheckboxPageFactory.isDisplayed()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidcheckboxPageFactory.isDisplayed()));
 		    		break;
 			    	
 		    		
 		    	case 8:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidimgfacebookPageFactory.isDisplayed() && 
-		    				homeidimgtwitterPageFactory.isDisplayed() && 
-		    				homeidimgflickrPageFactory.isDisplayed() && 
-		    				homeidimgyoutubePageFactory.isDisplayed()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidimgfacebookPageFactory.isDisplayed() && 
+		    				atualGammaValidatorHomePage.homeidimgtwitterPageFactory.isDisplayed() && 
+		    				atualGammaValidatorHomePage.homeidimgflickrPageFactory.isDisplayed() && 
+		    				atualGammaValidatorHomePage.homeidimgyoutubePageFactory.isDisplayed()));
 
-		    		remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, homeidimgfacebookPageFactory, driver);
-		    		remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, homeidimgtwitterPageFactory, driver);
-		    		remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, homeidimgflickrPageFactory, driver);
-		    		remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, homeidimgyoutubePageFactory, driver);
+		    		RemedySignUpCommonMethodsAndVarriables.remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, atualGammaValidatorHomePage.homeidimgfacebookPageFactory, driver);
+		    		RemedySignUpCommonMethodsAndVarriables.remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, atualGammaValidatorHomePage.homeidimgtwitterPageFactory, driver);
+		    		RemedySignUpCommonMethodsAndVarriables.remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, atualGammaValidatorHomePage.homeidimgflickrPageFactory, driver);
+		    		RemedySignUpCommonMethodsAndVarriables.remedyHighlightAndScreenshotTestedElement(remedyTestCaseIterator, atualGammaValidatorHomePage.homeidimgyoutubePageFactory, driver);
 		    		break;
 			    	
 		    		
 		    	case 9:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidresetbuttonPageFactory.isDisplayed() && 
-		    				homeidsubmitbuttonPageFactory.isDisplayed()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidresetbuttonPageFactory.isDisplayed() && 
+		    				atualGammaValidatorHomePage.homeidsubmitbuttonPageFactory.isDisplayed()));
 		    		break;
 			    	
 		    		
 		    	case 10:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(hometimestampPageFactory.isDisplayed() && 
-		    				hometimestampPageFactory.getText().equals(DateFormatUtils.format(new Date(), "MMMM d, yyyy"))));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.hometimestampPageFactory.isDisplayed() && 
+		    				atualGammaValidatorHomePage.hometimestampPageFactory.getText().equals(DateFormatUtils.format(new Date(), "MMMM d, yyyy"))));
 		    				
 //		    				&& (RemedyRegexInterface.remedyRegexDateValidator(hometimestampPageFactory.getText())));
 		    		break;
 			    	
 		    		
 		    	case 11:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homecopyrightPageFactory.getText()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homecopyrightPageFactory.getText()));
 		    		break;
 			    	
 		    		
 		    	case 12:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeosbrowserPageFactory.isDisplayed()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeosbrowserPageFactory.isDisplayed()));
 		    		break;
 			    	
 		    		
 		    	case 13:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidcurrentlocationPageFactory.isDisplayed()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidcurrentlocationPageFactory.isDisplayed()));
 		    		break;
 			    	
 		    		
 		    	case 14:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homexpathCurrentWeatherDynamicIconPageFactory.isDisplayed()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homexpathCurrentWeatherDynamicIconPageFactory.isDisplayed()));
 		    		break;
 			    	
 		    		
 		    	case 15:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidtemperaturePageFactory.getText()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidtemperaturePageFactory.getText()));
 		    		break;
 			    	
-		    		
+//		    		
 		    	case 16:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseExpected", homeidquotesPageFactory.getText());
-		    				ArrayList<String> allTabs = new ArrayList<String>(driver.getWindowHandles());
-		    				driverSecondaryBrowser.navigate().to(propRemedy.getProperty("url"));
-		    				new WebDriverWait(driverSecondaryBrowser, 10L).until(ExpectedConditions.presenceOfElementLocated(By.id("id_quotes")));
-		    				sbRemedyTestCaseHelper.append(driverSecondaryBrowser.findElement(By.id("id_quotes")).getText());
-		    				driverSecondaryBrowser.close();
-		    				driver.switchTo().window((String)allTabs.get(0));
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(sbRemedyTestCaseHelper.toString()));
+//		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseExpected", atualGammaValidatorHomePage.homeidquotesPageFactory.getText());
+//		    				ArrayList<String> allTabs = new ArrayList<String>(driver.getWindowHandles());
+//		    				driverSecondaryBrowser.navigate().to(propRemedy.getProperty("url"));
+//		    				new WebDriverWait(driverSecondaryBrowser, 10L).until(ExpectedConditions.presenceOfElementLocated(By.id("id_quotes")));
+//		    				sbRemedyTestCaseHelper.append(driverSecondaryBrowser.findElement(By.id("id_quotes")).getText());
+//		    				driverSecondaryBrowser.close();
+//		    				driver.switchTo().window((String)allTabs.get(0));
+//		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(sbRemedyTestCaseHelper.toString()));
 		    		break;
 			    	
 		    		
 		    	case 17:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidtemperaturePageFactory.getText()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidtemperaturePageFactory.getText()));
 		    		break;
 			    	
 		    		
 		    	case 24:
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidcurrentlocationPageFactory.getText()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidcurrentlocationPageFactory.getText()));
 		    		break;
 			    	
 		    		
@@ -165,20 +177,19 @@ public class RemedyTestCasesActual extends RemedySignUpCommonMethodsAndVarriable
 		    			String browserNameFormatted1 = 
 		    			Character.toString(cap1.getBrowserName().charAt(0)).toUpperCase() + 
 		    			cap1.getBrowserName().substring(1);
-		    			sbRemedyTestCaseHelper.append(System.getProperty("os.name"))
+		    		RemedySignUpCommonMethodsAndVarriables.sbRemedyTestCaseHelper.append(System.getProperty("os.name"))
 		    			.append(" & ").append(browserNameFormatted1).append(" ").append(cap1.getVersion().toString());
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseExpected", sbRemedyTestCaseHelper.toString());
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeosbrowserPageFactory.getText()));
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseExpected", RemedySignUpCommonMethodsAndVarriables.sbRemedyTestCaseHelper.toString());
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeosbrowserPageFactory.getText()));
 		    		break;
 			    	
 		    		
 		    	case 27:
-		    			Abstract_SignUpPage.remedyFillInFields(propRemedy);
-		    		    homeidresetbuttonPageFactory.click();
-		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(homeidfnamePageFactory.getAttribute("value").isEmpty() && 
-		    				homeidlnamePageFactory.getAttribute("value").isEmpty() && 
-		    				homeidemailPageFactory.getAttribute("value").isEmpty() && 
-		    				homeidphonePageFactory.getAttribute("value").isEmpty()));
+		    			atualGammaValidatorHomePage.homeidresetbuttonPageFactory.click();
+		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(atualGammaValidatorHomePage.homeidfnamePageFactory.getAttribute("value").isEmpty() && 
+		    				atualGammaValidatorHomePage.homeidlnamePageFactory.getAttribute("value").isEmpty() && 
+		    				atualGammaValidatorHomePage.homeidemailPageFactory.getAttribute("value").isEmpty() && 
+		    				atualGammaValidatorHomePage.homeidphonePageFactory.getAttribute("value").isEmpty()));
 		    		break;
 		    		
 		    		

@@ -6,53 +6,54 @@ package signUpValidatorMaserati;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Properties;
-import java.util.Scanner;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import remedyEmailSender.RemedySimpleGmailEmailMessageSender;
-
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 
-
-
-
-// The main Executioner of the RemedySignUpValidator Viper - this is the ignition and steering wheel of the program
 public class RemedyMain 
   extends RemedySignUpCommonMethodsAndVarriables
-//  implements RemedyRegexInterfacer
 {
-	 
 	
-	
-//
-//@FindBy(id="id_f_title")
-//@CacheLookup
-//protected static WebElement homeidftitlePageFactory;
-
-
-
-
-	//the following is for junit
-	public static String zoom = "ok";
-	
-
 
 public static void main(final String[] signUpValidator)
   {
+	
+	
+
+	// Smoke test newest Sep13 RR
+	int smokeTestOnFeatureSwitch = 1;
+	System.out.println("\r\n\t\t Starting Smoke test - the parameter is showing: " + smokeTestOnFeatureSwitch);	
+	if (smokeTestOnFeatureSwitch ==1) {
 		
-	  
+		if (new File("RemedyMetadata/RemedySignUpMetadata.xlsx").isFile()) {
+			System.out.println("\r\n\t\t Smoke Test - RemedySignUpMetada is present! :) RR \r\n");
+		} else {
+				System.exit(smokeTestOnFeatureSwitch);		
+				}
+		WebDriver actualHtmlUnitDriver = new HtmlUnitDriver();
+		actualHtmlUnitDriver.navigate().to("http://learn2test.net/qa/apps/sign_up/v1/");
+		WebElement smokeTestCopyrightelement = actualHtmlUnitDriver.findElement(By.id("copyright"));
+		System.out.println(smokeTestCopyrightelement.getText());
+		actualHtmlUnitDriver.quit();
+		System.out.println("\r\n\t\t Smoke Test - Internet Connection and Sign_up website are reachable!! :) RR \r\n");
+	
+		System.out.println("\r\n\t\t Smoke Test Completed Successfully!! RR \r\n");
+	}
+	
+
+	
+	
+	
+	
+	
 	//Below is reading and loading of properties file into propRemedy and inputRemedy APR05 RR
     Properties propRemedy = new Properties(); //Properties file reader APR04 RR
     try
@@ -69,29 +70,24 @@ public static void main(final String[] signUpValidator)
     
     
     
-    
-    // I need to re-arrange the start up sequance so that excel file gets loaded first,
-    // if the excel file has an "RemedyAutorun" setting for it to auto execute it will auto run with default email
-    // if the excel file has a "User mode" setting than it will prompt user for information
-    
-    
   
     
     
-    
-    // Bellow is the password requirement that will ask for the email password for the email that will be used
-    // to send the results of the script operation RR Aug18 
-    Scanner scanner = new Scanner(System.in);
-    
-	System.out.println("Hi please enter your name for the \"Test Casese Report\". RR");
-	final String testCasesReportUser = scanner.nextLine();
-	System.out.println("if you want a separate email to be sent as report enter it now, otherwise press enter for an email to be sent t \"default\". RR");
-	final String testCasesReportEmail = scanner.nextLine();
-    //if statement that validates email with a regex function
-	System.out.println("For security reasons the password for the Test Case Report email is not hardcoded. "
-			+ "please enter the password for email to continue. RR");
-	final String testCasesReportEmailPassword = scanner.nextLine();
-	
+//    
+//    // Bellow is the password requirement that will ask for the email password for the email that will be used
+//    // to send the results of the script operation RR Aug18 
+//    Scanner scanner = new Scanner(System.in);
+//    
+//	System.out.println("Hi please enter your name for the \"Test Casese Report\". RR");
+//	final String testCasesReportUser = scanner.nextLine();
+//	System.out.println("if you want a separate email to be sent as report enter it now, otherwise press enter for an email to be sent t \"default\". RR");
+//	final String testCasesReportEmail = scanner.nextLine();
+//    //if statement that validates email with a regex function
+//	System.out.println("For security reasons the password for the Test Case Report email is not hardcoded. "
+//			+ "please enter the password for email to continue. RR");
+//	final String testCasesReportEmailPassword = scanner.nextLine();
+//	
+    String testCasesReportEmailPassword = "huhu";
 	
 	
 	
@@ -106,14 +102,37 @@ public static void main(final String[] signUpValidator)
 		e1.printStackTrace();
 	}
     
+	
+    
+    
+  
+//  	Feature Switch to turn smoke test off or on SEP 15 RR
+  		String featurSwitchSmokeTest = "off";
+  		if (featurSwitchSmokeTest == "on") {
+    //////////////////// Smoke test!
+    driver.navigate().to(propRemedy.getProperty("url"));
+    String expectedCopyrightForsmokeTest = "mock copyright - PLEASE UPDATE VALUE - SEP10 RR";
+    WebElement actualCopyrightForSmokeTest = driver.findElement(By.id("copyright"));
+    if (expectedCopyrightForsmokeTest.equals((actualCopyrightForSmokeTest).toString())) {
+    	System.out.println("Smoke Test Pass!! :)))))))0");
+    } else {
+    	System.out.println("Smoke test failed!!! - program exiting now. SEP10 RR");
+    	System.exit(0);
+    	}
+  											}
+    
+    
+  		
+  		
+  		
+    
+    
+    
  
     
- //below we are trying to load excel with the newly created ExcelRemedyObject SEP07 RR
-    String mmmmetaDataWorkBookPath = "RemedyMetadata/RemedySignUpMetadata.xlsx";
-    int ttttesting_DataSheetPositionInWorkbook = 1;
-    ExcelRemedyObject actualEvolutionazedPathEnabledExcelRemedyObject = new ExcelRemedyObject(mmmmetaDataWorkBookPath, ttttesting_DataSheetPositionInWorkbook);
-    Workbook remedyMetadataExcelWorkBook = actualEvolutionazedPathEnabledExcelRemedyObject.metaDataWorkbookRemedy;
-    Sheet remedyMetadataExcelReaderSheet = actualEvolutionazedPathEnabledExcelRemedyObject.metaDataSheetRemedy;
+    String metaDataWorkBookPath = "RemedyMetadata/RemedySignUpMetadata.xlsx";
+    RemedyExcelObject actualExcelRemedyObject = new RemedyExcelObject(metaDataWorkBookPath);
+    Sheet remedyMetadataExcelReaderSheet = actualExcelRemedyObject.metaDataWorkbookRemedy.getSheet("Testing_Data");
     
 		int remedyExpectedResultsColumnNumberFromWB = 5-1;
 		
@@ -134,10 +153,12 @@ public static void main(final String[] signUpValidator)
 	        {
 	    	
 	    	// Loading the test cases actual results using HashTable instead of HashMap to keep it Synchronized
-	    	final Hashtable<String, String> remedyMainTestCasesHashMap = RemedyTestCasesActual.remedyTestCases(remedyTestCaseIterator);
-			
+	    	final Hashtable<String, String> remedyMainTestCasesHashMap = RemedyTestCasesActual.remedyTestCases(remedyTestCaseIterator, driver);
+	    	
+
+	    	
 	    	// xlsx workbook adding of result RR (2 - 4)
-	    	Sheet remedyExcelResultsSheet = remedyMetadataExcelWorkBook.getSheetAt(1);
+	    	Sheet remedyExcelResultsSheet = actualExcelRemedyObject.metaDataWorkbookRemedy.getSheet("Testing_Data");
 	    	Row remedyExcelResultsRow = remedyExcelResultsSheet.getRow(remedyTestCaseIterator);
 	    	    
 	    	
@@ -173,25 +194,26 @@ public static void main(final String[] signUpValidator)
     
     
     
+
+	    
     
     
+
+////	// how to setzoom level in iexplorer before or when starting it Jul05
+////    // code below successfully opens internet explorer RR Jun29
+////	File filess = new File("RemedyMetadata/Webdriver Essentials/IEDriverServer.exe");
+////    System.setProperty("webdriver.ie.driver", filess.getAbsolutePath() );  
+////    WebDriver driverosa = new InternetExplorerDriver();
+////    driverosa.navigate().to(propRemedy.getProperty("url"));
+////  	String driverosatitle = driverosa.getTitle();
+////    System.out.println(driverosatitle);
+////	driverosa.quit();
+//	
     
     
-	    new ExcelRemedyObject(actualEvolutionazedPathEnabledExcelRemedyObject.metaDataWorkbookRemedy); 
-//	// how to setzoom level in iexplorer before or when starting it Jul05
-//    // code below successfully opens internet explorer RR Jun29
-//	File filess = new File("RemedyMetadata/Webdriver Essentials/IEDriverServer.exe");
-//    System.setProperty("webdriver.ie.driver", filess.getAbsolutePath() );  
-//    WebDriver driverosa = new InternetExplorerDriver();
-//    driverosa.navigate().to(propRemedy.getProperty("url"));
-//  	String driverosatitle = driverosa.getTitle();
-//    System.out.println(driverosatitle);
-//	driverosa.quit();
-	
-    
-    
-    
-    
+	    actualExcelRemedyObject.remedyTestResultsExcelOutputMethod(actualExcelRemedyObject.metaDataWorkbookRemedy);
+	    
+	    
     
     
     

@@ -4,16 +4,11 @@ package signUpValidatorMaserati;
  * Last Modified Jun01/15
  */
 
-import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
@@ -25,9 +20,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import remedyEmailSender.RemedySimpleGmailEmailMessageSender;
 
@@ -50,77 +42,6 @@ public class RemedySignUpCommonMethodsAndVarriables
   
   
   
-  
-  
-  @FindBy(id="id_f_title")
-  @CacheLookup
-  protected static WebElement homeidftitlePageFactory;
-  @FindBy(id="id_quotes")
-  @CacheLookup
-  protected static WebElement homeidquotesPageFactory;
-  @FindBy(id="id_fname")
-  @CacheLookup
-  protected static WebElement homeidfnamePageFactory;
-  @FindBy(id="id_lname")
-  @CacheLookup
-  protected static WebElement homeidlnamePageFactory;
-  @FindBy(id="id_email")
-  @CacheLookup
-  protected static WebElement homeidemailPageFactory;
-  @FindBy(id="id_phone")
-  @CacheLookup
-  protected static WebElement homeidphonePageFactory;
-  @FindBy(id="id_g_radio_01")
-  @CacheLookup
-  protected static WebElement homeidgradio01PageFactory;
-  @FindBy(id="id_g_radio_02")
-  @CacheLookup
-  protected static WebElement homeidgradio02PageFactory;
-  @FindBy(id="id_state")
-  @CacheLookup
-  protected static WebElement homeidstatePageFactory;
-  @FindBy(id="id_checkbox")
-  @CacheLookup
-  protected static WebElement homeidcheckboxPageFactory;
-  @FindBy(id="id_img_facebook")
-  @CacheLookup
-  protected static WebElement homeidimgfacebookPageFactory;
-  @FindBy(id="id_img_twitter")
-  @CacheLookup
-  protected static WebElement homeidimgtwitterPageFactory;
-  @FindBy(id="id_img_flickr")
-  @CacheLookup
-  protected static WebElement homeidimgflickrPageFactory;
-  @FindBy(id="id_img_youtube")
-  @CacheLookup
-  protected static WebElement homeidimgyoutubePageFactory;
-  @FindBy(id="id_reset_button")
-  @CacheLookup
-  protected static WebElement homeidresetbuttonPageFactory;
-  @FindBy(id="id_submit_button")
-  @CacheLookup
-  protected static WebElement homeidsubmitbuttonPageFactory;
-  @FindBy(id="timestamp")
-  @CacheLookup
-  protected static WebElement hometimestampPageFactory;
-  @FindBy(id="copyright")
-  @CacheLookup
-  protected static WebElement homecopyrightPageFactory;
-  @FindBy(id="os_browser")
-  @CacheLookup
-  protected static WebElement homeosbrowserPageFactory;
-  @FindBy(id="id_current_location")
-  @CacheLookup
-  protected static WebElement homeidcurrentlocationPageFactory;
-  @FindBy(id="id_temperature")
-  @CacheLookup
-  protected static WebElement homeidtemperaturePageFactory;
-  @FindBy(xpath="/html/body/form/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[1]/td[5]/table/tbody/tr[2]/td[1]/img")
-  @CacheLookup
-  protected static WebElement homexpathCurrentWeatherDynamicIconPageFactory;
-  
-  
-  
   protected static StringBuilder sbRemedyTestCaseHelper = new StringBuilder(256);
   
   
@@ -133,7 +54,6 @@ public class RemedySignUpCommonMethodsAndVarriables
   {
 	  
 	  
-    PageFactory.initElements(driver, RemedyMain.class); // PAGEFACTORY RR	
     
     
     
@@ -145,6 +65,7 @@ public class RemedySignUpCommonMethodsAndVarriables
     driver.navigate().to(propRemedy.getProperty("url"));
 //    driver.navigate().to("C:\\Users\\Roma Remedy\\Desktop\\On to Bigger and Better\\SeignUpWebsite\\Welcome to Sign Up v1.htm");
     driverSecondaryBrowser.navigate().to(propRemedy.getProperty("url"));
+    driverSecondaryBrowser.quit();
     
     
 //    driver.get("C:\\Users\\Roma Remedy\\Desktop\\On to Bigger and Better\\SeignUpWebsite\\Welcome to Sign Up v1.htm");
@@ -202,7 +123,7 @@ public class RemedySignUpCommonMethodsAndVarriables
 	  
 	  
 	  RemedySimpleGmailEmailMessageSender.remedyEmailSenderMethod(summaryEmailPassword, scriptExecutionSummary);
-  	
+//	  BetaRemedySimpleGmailEmailMessageSenderSep10.remedyEmailSenderMethod(summaryEmailPassword, scriptExecutionSummary);
 	  
 	  
 	  driver.quit();
@@ -265,11 +186,18 @@ public class RemedySignUpCommonMethodsAndVarriables
   File scrFile222 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
   // Now you can do whatever you need to do with it, for example copy somewhere
   FileUtils.copyFile(scrFile222, new File("RemedyTestResults/RemedyScreenshots/screenshot" + remedyTestCaseIterator + ".png"));
-//  try {
-//	Thread.sleep(50);
-////	
-//} catch (InterruptedException e) {
-//}
+
+  
+  // below code should print three times the html string of the element Sep10 RR
+  System.out.println(((JavascriptExecutor) driver).executeScript("return arguments[0].innerHTML", element));
+  System.out.println(((JavascriptExecutor) driver).executeScript("return arguments[0].innerHTML", element));
+  System.out.println(((JavascriptExecutor) driver).executeScript("return arguments[0].innerHTML", element));
+  // below code will save pic screen with the inner html string in the element Sep10 RR
+  FileUtils.copyFile(scrFile222, new File("RemedyTestResults/RemedyScreenshots/screenshot"
+  + ((JavascriptExecutor) driver).executeScript("return arguments[0].innerHTML", element) + ".png"));
+
+  
+  
   romaTestJS.executeScript("arguments[0].style.backgroundColor = '"+originalBackgroundColor+"'",  element);
   
 
