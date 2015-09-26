@@ -31,9 +31,6 @@ public class RemedySignUpCommonMethodsAndVarriables
   // Declares the Object driver that will have the properties of our tested web site RR
   // The Object driver will also be used as a base for pre-loading "PageFactory" Elements. RR
   public static WebDriver driver = new FirefoxDriver();   
-  // Declares the Object driverSecondaryBrowser for test cases involving browser navigation and comparison
-  // Secondary reason for driverSecondaryBrowser is to maintain PageFactory references if the main driver navigates
-  protected static WebDriver driverSecondaryBrowser = new FirefoxDriver();
   
   
   
@@ -60,17 +57,11 @@ public class RemedySignUpCommonMethodsAndVarriables
     
     driver.manage().window().setPosition(new Point(0, 0));
     driver.manage().window().setSize(new Dimension(800, 600));
-    driverSecondaryBrowser.manage().window().setPosition(new Point(800, 0));
-    driverSecondaryBrowser.manage().window().setSize(new Dimension(800, 600));
     driver.navigate().to(propRemedy.getProperty("url"));
 //    driver.navigate().to("C:\\Users\\Roma Remedy\\Desktop\\On to Bigger and Better\\SeignUpWebsite\\Welcome to Sign Up v1.htm");
-    driverSecondaryBrowser.navigate().to(propRemedy.getProperty("url"));
-    driverSecondaryBrowser.quit();
     
     
 //    driver.get("C:\\Users\\Roma Remedy\\Desktop\\On to Bigger and Better\\SeignUpWebsite\\Welcome to Sign Up v1.htm");
-//    driverSecondaryBrowser.get(propRemedy.getProperty("url"));
-//    driverSecondaryBrowser.get("C:\\Users\\Roma Remedy\\Desktop\\On to Bigger and Better\\SeignUpWebsite\\Welcome to Sign Up v1.htm");
 
 
     

@@ -153,10 +153,6 @@ public class RemedyTestCasesActual //extends RemedySignUpCommonMethodsAndVarriab
 		    	case 16:
 //		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseExpected", atualGammaValidatorHomePage.homeidquotesPageFactory.getText());
 //		    				ArrayList<String> allTabs = new ArrayList<String>(driver.getWindowHandles());
-//		    				driverSecondaryBrowser.navigate().to(propRemedy.getProperty("url"));
-//		    				new WebDriverWait(driverSecondaryBrowser, 10L).until(ExpectedConditions.presenceOfElementLocated(By.id("id_quotes")));
-//		    				sbRemedyTestCaseHelper.append(driverSecondaryBrowser.findElement(By.id("id_quotes")).getText());
-//		    				driverSecondaryBrowser.close();
 //		    				driver.switchTo().window((String)allTabs.get(0));
 //		    		remedyHashTableTestCasesActual.put("hashKeyTestCaseActual", String.valueOf(sbRemedyTestCaseHelper.toString()));
 		    		break;
