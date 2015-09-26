@@ -1,12 +1,208 @@
-Sep 25, 2015 12:45:52 AM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
-CONFIG: 
-
-	 Test Case ID: 	 	200	 - Passed
-
-
-Sep 25, 2015 12:45:52 AM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerFailed
+Sep 26, 2015 3:03:51 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerFailed
 WARNING: 
 
-	 Test Case ID: 	 	9229933	 - FAILED
+	 Test Case ID: 	 	1	 - FAILED
 
 
+Sep 26, 2015 3:03:52 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	2	 - Passed
+
+
+Sep 26, 2015 3:03:52 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	3	 - Passed
+
+
+Sep 26, 2015 3:03:52 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	4	 - Passed
+
+
+Sep 26, 2015 3:03:53 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	5	 - Passed
+
+
+Sep 26, 2015 3:03:53 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	6	 - Passed
+
+
+Sep 26, 2015 3:03:53 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	7	 - Passed
+
+
+Sep 26, 2015 3:03:54 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	8	 - Passed
+
+
+Sep 26, 2015 3:03:54 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	9	 - Passed
+
+
+Sep 26, 2015 3:03:54 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerFailed
+WARNING: 
+
+	 Test Case ID: 	 	10	 - FAILED
+
+
+Sep 26, 2015 3:03:54 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	11	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	12	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	13	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	14	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	15	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyExceptionHandler
+WARNING: 
+	 Test Case Number: 		16	- Caused an EXCEPTIION - Check Element precense and validity 
+It is also possible that the corresponding Cell in Excel is empty or invalid
+	java.lang.NullPointerException
+	
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	17	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	18	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	19	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	20	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	21	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	22	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	23	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	24	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	25	 - Passed
+
+
+Sep 26, 2015 3:03:55 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerFailed
+WARNING: 
+
+	 Test Case ID: 	 	26	 - FAILED
+
+
+Sep 26, 2015 3:03:56 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	27	 - Passed
+
+
+Sep 26, 2015 3:03:56 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	28	 - Passed
+
+
+Sep 26, 2015 3:03:56 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	29	 - Passed
+
+
+Sep 26, 2015 3:03:56 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerPassed
+CONFIG: 
+
+	 Test Case ID: 	 	30	 - Passed
+
+
+Sep 26, 2015 3:03:56 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerFailed
+WARNING: 
+
+	 Test Case ID: 	 	31	 - FAILED
+
+
+Sep 26, 2015 3:03:57 PM signUpValidatorMaserati.FantasticTrippleRemedyLogger remedyLoggerExitSeuance
+CONFIG: 
+
+
+
+	 User:		 Roma Remedy
+	 Myemail:	 RemedyRoma@gmail.com
+	 Cellphone:	 650 731 2873
+
+
+	 Script executed successfully!!
+	 Test Script Duration:		 11841
+	 Failed Test Cases:		 5
+	 Test Date:		 09/26/2015 15:03:56
+	 Output file:		 REMEDYLOGGER.txt
+
+
+	 Os:			 Windows 7
+	 Jave Version:		 JaveSE-1.8
+	 Script name:		 RemedySignUpViper
+	 Regression Testing for  www.RomaRemedySolutions.com
+	 (: Thank you for trying Roma RemedySignUpViper - Have a nice day RR :)

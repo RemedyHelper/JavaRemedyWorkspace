@@ -65,13 +65,13 @@ public class RemedySignUpCommonMethodsAndVarriables
 
 
     
-    // ChromeDriver for cross compatibility testing RR
-	System.setProperty("webdriver.chrome.driver", "RemedyMetadata/Webdriver Essentials/chromedriver.exe" );  
-    WebDriver driverchromi = new ChromeDriver();
-    driverchromi.navigate().to(propRemedy.getProperty("url"));
-  	String driverosatitlechrommi = driverchromi.getTitle();
-    System.out.println(driverosatitlechrommi);	
-    driverchromi.quit();   
+//    // ChromeDriver for cross compatibility testing RR
+//	System.setProperty("webdriver.chrome.driver", "RemedyMetadata/Webdriver Essentials/chromedriver.exe" );  
+//    WebDriver driverchromi = new ChromeDriver();
+//    driverchromi.navigate().to(propRemedy.getProperty("url"));
+//  	String driverosatitlechrommi = driverchromi.getTitle();
+//    System.out.println(driverosatitlechrommi);	
+//    driverchromi.quit();   
     
     
   }
@@ -116,8 +116,7 @@ public class RemedySignUpCommonMethodsAndVarriables
 	  RemedySimpleGmailEmailMessageSender.remedyEmailSenderMethod(summaryEmailPassword, scriptExecutionSummary);
 //	  BetaRemedySimpleGmailEmailMessageSenderSep10.remedyEmailSenderMethod(summaryEmailPassword, scriptExecutionSummary);
 	  
-	  
-	  driver.quit();
+	  driver.close();
 
 	  FantasticTrippleRemedyLogger actualFantasticTrippleRemeyLogger = new FantasticTrippleRemedyLogger(); // fantastic logger sep07RR
 	  actualFantasticTrippleRemeyLogger.remedyLoggerExitSeuance(scriptExecutionSummary);					// fantastic logger sep07 RR
