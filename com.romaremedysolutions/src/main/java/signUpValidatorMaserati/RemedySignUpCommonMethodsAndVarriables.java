@@ -104,7 +104,7 @@ public class RemedySignUpCommonMethodsAndVarriables
 			  + "\r\n\t Test Script Duration:\t\t " + (System.currentTimeMillis() - remedyTestDurationTimer)
 			  + "\r\n\t Failed Test Cases:\t\t " + exitStatusFailedTestsCounter
 			  + "\r\n\t Test Date:\t\t "+ new SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new Date())
-			  + "\r\n\t Output file:\t\t REMEDYLOGGER.txt"
+			  + "\r\n\t Output file:\t\t remedyLoggerNEWAGEAlpha.txt"
 			  + "\r\n\r\n\r\n\t Os:\t\t\t " + System.getProperty("os.name") 
 			  + "\r\n\t Jave Version:\t\t JaveSE-1.8"
 			  + "\r\n\t Script name:\t\t RemedySignUpViper"
@@ -127,9 +127,9 @@ public class RemedySignUpCommonMethodsAndVarriables
     
 
     // Below Process p opens remedyTestResultsFolder directory in windows and file selects the RemedyLogger.txt RR-- need an option for mac
-    Process p = new ProcessBuilder("explorer.exe", "/select,remedyTestResults\\REMEDYLOGGER.txt").start();
-    // ProcessBuilder pb launches the REMEDYLOGGER.TXT log file for review. RR
-    ProcessBuilder pb = new ProcessBuilder("Notepad.exe", new File("RemedyTestResults/REMEDYLOGGER.txt").getPath());
+    Process p = new ProcessBuilder("explorer.exe", "/select,remedyTestResults\\remedyLoggerNEWAGEAlpha.txt").start();
+    // ProcessBuilder pb launches the remedyLoggerNEWAGEAlpha.TXT log file for review. RR
+    ProcessBuilder pb = new ProcessBuilder("Notepad.exe", new File("RemedyTestResults/remedyLoggerNEWAGEAlpha.txt").getPath());
     pb.start();
     
     

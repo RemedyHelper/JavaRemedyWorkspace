@@ -25,7 +25,12 @@ public class RemedyMain
 
 public static void main(final String[] signUpValidator)
   {
-	
+
+
+	  // initializing RemedyLoggerNEWAGE Sep27
+	  RemedyLoggerNEWAGEAlpha remedyLoggerNEWAGEAlpha = new RemedyLoggerNEWAGEAlpha();
+
+	  remedyLoggerNEWAGEAlpha.ad
 	
 
 	// Smoke test newest Sep13 RR
@@ -103,9 +108,9 @@ public static void main(final String[] signUpValidator)
 	}
     
 	
-    
-    
-  
+
+
+
 //  	Feature Switch to turn smoke test off or on SEP 15 RR
   		String featurSwitchSmokeTest = "off";
   		if (featurSwitchSmokeTest == "on") {

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="remedyEclipseJar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/RemedySignUpValidatorBMW/remedyEclipseJar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

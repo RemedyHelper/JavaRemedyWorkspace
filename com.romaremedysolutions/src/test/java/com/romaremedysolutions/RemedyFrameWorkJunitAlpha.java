@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import org.testng.annotations.Test;
 import signUpValidatorMaserati.ExcelRemedyObjectOldthisisbeforesep14version;
 
 public class RemedyFrameWorkJunitAlpha {
@@ -15,7 +16,7 @@ public class RemedyFrameWorkJunitAlpha {
 		String sushi = actualExcelRemedyObject.metaDataSheetRemedy.getRow(3).getCell(1).getStringCellValue();
 		System.out.println(sushi);
 		assertEquals("fai;ire = strings are not equalss RR", "oki",sushi);
-		
+
 	}
 
 }
